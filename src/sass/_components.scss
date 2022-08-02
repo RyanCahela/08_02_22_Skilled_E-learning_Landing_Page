@@ -17,3 +17,25 @@
     background: var.$clr-gradient-700;
   }
 }
+
+.header,
+.footer {
+  &__container {
+    @include mix.container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer {
+  background-color: var.$clr-neutral-900;
+}
+
+.hero {
+  display: flex;
+
+  &__image-container {
+    width: 100%;
+  }
+}
