@@ -1,0 +1,89 @@
+@use "./variables" as var;
+
+@mixin _title-common-properties {
+  color: var.$clr-neutral-900;
+  font-weight: 900;
+}
+
+@mixin title-xl {
+  @include _title-common-properties;
+  font-size: 3.5rem;
+  line-height: 1.25;
+}
+
+@mixin title-l {
+  @include _title-common-properties;
+  font-size: 2.5rem;
+  line-height: 1.275;
+}
+
+@mixin title-m {
+  @include _title-common-properties;
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+@mixin title-s {
+  @include _title-common-properties;
+  font-size: 1.5rem;
+  line-height: 1.16;
+}
+
+@mixin body-m {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@mixin body-s {
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 700;
+}
+
+@mixin btn {
+  $transition-duration: 0.3s;
+  //remove default styles
+  appearance: none;
+  border: 0;
+
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  padding-block: 0.77em;
+  padding-inline: 1.77em;
+  border-radius: 1000em;
+  color: var.$clr-neutral-100;
+  position: relative;
+  transition-property: transform;
+  transition-duration: $transition-duration;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(var.$clr-neutral-100, 0.3);
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-property: opacity;
+    transition-duration: $transition-duration;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-3%);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    transition: none;
+  }
+}

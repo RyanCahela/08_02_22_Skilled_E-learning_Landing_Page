@@ -1,7 +1,251 @@
-.title {
-  color: steelblue;
-  background-color: #333;
-  font-family: Arial, Helvetica, sans-serif;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+.bg-neutral-100 {
+  background-color: #ffffff;
+}
+
+.text-neutral-100 {
+  color: #ffffff;
+}
+
+.bg-neutral-900 {
+  background-color: #13183f;
+}
+
+.text-neutral-900 {
+  color: #13183f;
+}
+
+.bg-neutral-500 {
+  background-color: #83869a;
+}
+
+.text-neutral-500 {
+  color: #83869a;
+}
+
+.bg-accent-700 {
+  background-color: #666ca3;
+}
+
+.text-accent-700 {
+  color: #666ca3;
+}
+
+.bg-accent-500 {
+  background-color: #f74780;
+}
+
+.text-accent-500 {
+  color: #f74780;
+}
+
+.bg-accent-300 {
+  background-color: #ffa7c3;
+}
+
+.text-accent-300 {
+  color: #ffa7c3;
+}
+
+.bg-gradient-300 {
+  background: linear-gradient(0deg, #f02aa6, #ff6f48);
+}
+
+.bg-gradient-700 {
+  background: linear-gradient(180deg, #4861ff, #f02aa6);
+}
+
+.ff-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.title-xl {
+  color: #13183f;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.25;
+}
+
+.title-l {
+  color: #13183f;
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 1.275;
+}
+
+.title-m {
+  color: #13183f;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+.title-s {
+  color: #13183f;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.16;
+}
+
+.body-m {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.body-s {
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 700;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap, 1rem);
+}
+
+.btn-neutral {
+  appearance: none;
+  border: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  padding-block: 0.77em;
+  padding-inline: 1.77em;
+  border-radius: 1000em;
+  color: #ffffff;
+  position: relative;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  background-color: #13183f;
+}
+.btn-neutral::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+}
+.btn-neutral:hover {
+  cursor: pointer;
+  transform: translateY(-3%);
+}
+.btn-neutral:hover::before {
+  opacity: 1;
+}
+.btn-neutral:active {
+  transform: translateY(0);
+  transition: none;
+}
+.btn-gradient-300 {
+  appearance: none;
+  border: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  padding-block: 0.77em;
+  padding-inline: 1.77em;
+  border-radius: 1000em;
+  color: #ffffff;
+  position: relative;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  background: linear-gradient(0deg, #f02aa6, #ff6f48);
+}
+.btn-gradient-300::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+}
+.btn-gradient-300:hover {
+  cursor: pointer;
+  transform: translateY(-3%);
+}
+.btn-gradient-300:hover::before {
+  opacity: 1;
+}
+.btn-gradient-300:active {
+  transform: translateY(0);
+  transition: none;
+}
+.btn-gradient-700 {
+  appearance: none;
+  border: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  padding-block: 0.77em;
+  padding-inline: 1.77em;
+  border-radius: 1000em;
+  color: #ffffff;
+  position: relative;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  background: linear-gradient(180deg, #4861ff, #f02aa6);
+}
+.btn-gradient-700::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+}
+.btn-gradient-700:hover {
+  cursor: pointer;
+  transform: translateY(-3%);
+}
+.btn-gradient-700:hover::before {
+  opacity: 1;
+}
+.btn-gradient-700:active {
+  transform: translateY(0);
+  transition: none;
 }
 
 /*# sourceMappingURL=style.css.map */
