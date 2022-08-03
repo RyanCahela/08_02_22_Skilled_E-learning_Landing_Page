@@ -5,6 +5,10 @@
 PAGE SECTIONS
 ***********************************/
 
+// * {
+//   outline: 1px solid red;
+// }
+
 .header,
 .footer {
   &__container {
@@ -37,8 +41,47 @@ PAGE SECTIONS
   display: flex;
   padding-top: 1.5rem;
 
+  &__container {
+    @include mix.container;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      padding-top: 5rem;
+      padding-bottom: 8rem;
+      position: relative;
+      width: 100%;
+    }
+
+    @media screen and (min-width: 1440px) {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+    }
+  }
+
+  &__copy-container {
+    @media screen and (min-width: 768px) {
+      max-width: 398px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      max-width: 457px;
+    }
+    margin-right: auto;
+  }
+
   &__image-container {
     width: 100%;
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: -35%;
+      right: -55%;
+    }
+
+    @media screen and (min-width: 1440px) {
+      top: -50%;
+      right: -50%;
+    }
   }
 
   &__paragraph {
@@ -124,7 +167,7 @@ PAGE SECTIONS
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(50%, -50%);
+    transform: translate(50%, -40%);
   }
 
   &__paragraph {

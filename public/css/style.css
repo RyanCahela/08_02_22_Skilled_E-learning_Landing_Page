@@ -22,7 +22,8 @@ p {
   font: inherit;
 }
 
-img {
+img,
+picture {
   width: 100%;
 }
 
@@ -144,8 +145,58 @@ PAGE SECTIONS
   display: flex;
   padding-top: 1.5rem;
 }
+.hero__container {
+  max-width: min(100% - 2rem, 689px);
+  margin-inline: auto;
+}
+@media screen and (min-width: 1440px) {
+  .hero__container {
+    max-width: 1110px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__container {
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+    position: relative;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero__container {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+.hero__copy-container {
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .hero__copy-container {
+    max-width: 398px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero__copy-container {
+    max-width: 457px;
+  }
+}
 .hero__image-container {
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .hero__image-container {
+    position: absolute;
+    top: -35%;
+    right: -55%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero__image-container {
+    top: -50%;
+    right: -50%;
+  }
 }
 .hero__paragraph {
   font-size: 1rem;
@@ -268,7 +319,7 @@ PAGE SECTIONS
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(50%, -50%);
+  transform: translate(50%, -40%);
 }
 .courses__paragraph {
   font-size: 1rem;

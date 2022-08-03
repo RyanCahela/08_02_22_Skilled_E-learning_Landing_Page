@@ -34,8 +34,8 @@
       </div>
     </header>
     <section class="hero">
-      <div class="container">
-        <div>
+      <div class="hero__container">
+        <div class="hero__copy-container">
           <h1 class="hero__title-l">Maximize skill, minimize budget</h1>
           <p class="hero__paragraph">
             Our modern courses across a range of in-demand skills will give you
@@ -45,7 +45,39 @@
         </div>
         <div class="hero__image-container">
           <picture>
-            <source srcset="./assets/image-hero-desktop.png" />
+            <!--Desktop 1440px-->
+            <source
+              srcset="
+                assets/image-hero-desktop.webp,
+                assets/image-hero-desktop@2x.webp 2x
+              "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="
+                assets/image-hero-desktop.png,
+                assets/image-hero-desktop@2x.png 2x
+              "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="
+                assets/image-hero-tablet.webp 965w,
+                assets/image-hero-tablet@2x.webp 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                assets/image-hero-tablet.png 965w,
+                assets/image-hero-tablet@2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source srcset="assets/image-hero-mobile.webp" />
+            <source srcset="assets/image-hero-mobile@2x.webp 2x" />
+            <source srcset="assets/image-hero-mobile.png 435w" />
+            <source srcset="assets/image-hero-mobile@2x.png 2x" />
             <img
               src="assets/image-hero-desktop.png"
               alt="woman drinking coffee while learning"
