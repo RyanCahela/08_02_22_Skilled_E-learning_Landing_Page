@@ -87,7 +87,7 @@ img {
 }
 
 .container {
-  max-width: min(100% - 1rem, 689px);
+  max-width: min(100% - 2rem, 689px);
   margin-inline: auto;
 }
 @media screen and (min-width: 1440px) {
@@ -101,7 +101,7 @@ PAGE SECTIONS
 ***********************************/
 .header__container,
 .footer__container {
-  max-width: min(100% - 1rem, 689px);
+  max-width: min(100% - 2rem, 689px);
   margin-inline: auto;
   display: flex;
   justify-content: space-between;
@@ -142,6 +142,7 @@ PAGE SECTIONS
 
 .hero {
   display: flex;
+  padding-top: 1.5rem;
 }
 .hero__image-container {
   width: 100%;
@@ -149,6 +150,8 @@ PAGE SECTIONS
 .hero__paragraph {
   font-size: 1rem;
   line-height: 1.75;
+  margin-block-start: 1.625em;
+  margin-block-end: 1.5em;
 }
 @media screen and (min-width: 1440px) {
   .hero__paragraph {
@@ -179,7 +182,7 @@ PAGE SECTIONS
   background: linear-gradient(180deg, #ffffff, #f0f1ff);
 }
 .courses__container {
-  max-width: min(100% - 1rem, 689px);
+  max-width: min(100% - 2rem, 689px);
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -236,6 +239,22 @@ PAGE SECTIONS
     font-size: 1.5rem;
   }
 }
+.courses__title-m {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.33;
+}
+@media screen and (min-width: 1440px) {
+  .courses__title-m {
+    font-weight: 900;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .courses__title-m {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+}
 .courses__link {
   color: #f74780;
   text-decoration: none;
@@ -268,18 +287,6 @@ PAGE SECTIONS
 /*******************************************
 Smaller On-page Components
 ********************************************/
-.body-copy {
-  font-size: 1rem;
-  line-height: 1.75;
-}
-@media screen and (min-width: 1440px) {
-  .body-copy {
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 1.5;
-  }
-}
-
 .btn-neutral {
   appearance: none;
   border: 0;

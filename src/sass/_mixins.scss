@@ -128,7 +128,7 @@
 }
 
 @mixin container {
-  max-width: min(calc(100% - 1rem), 689px);
+  max-width: min(calc(100% - 2rem), 689px);
   margin-inline: auto;
 
   @media screen and (min-width: 1440px) {

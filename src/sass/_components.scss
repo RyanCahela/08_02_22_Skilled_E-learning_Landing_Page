@@ -35,6 +35,7 @@ PAGE SECTIONS
 
 .hero {
   display: flex;
+  padding-top: 1.5rem;
 
   &__image-container {
     width: 100%;
@@ -42,6 +43,9 @@ PAGE SECTIONS
 
   &__paragraph {
     @include mix.body-copy;
+
+    margin-block-start: 1.625em;
+    margin-block-end: 1.5em;
   }
 
   &__title-l {
@@ -101,6 +105,10 @@ PAGE SECTIONS
     @include mix.title-s;
   }
 
+  &__title-m {
+    @include mix.title-m;
+  }
+
   &__link {
     color: var.$clr-accent-500;
     text-decoration: none;
@@ -129,10 +137,6 @@ PAGE SECTIONS
 /*******************************************
 Smaller On-page Components
 ********************************************/
-
-.body-copy {
-  @include mix.body-copy;
-}
 
 .btn {
   &-neutral {
