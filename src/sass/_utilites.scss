@@ -28,36 +28,6 @@
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-.title-xl {
-  @include mix.title-xl;
-}
-
-.title-l {
-  @include mix.title-l;
-}
-
-.title-m {
-  @include mix.title-m;
-}
-
-.title-s {
-  @include mix.title-s;
-}
-
-.body-m {
-  @include mix.body-m;
-}
-
-.body-s {
-  @include mix.body-s;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap, 1rem);
-}
-
 .container {
   @include mix.container;
 }

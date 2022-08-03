@@ -19,6 +19,7 @@ h5,
 h6,
 p {
   margin-block: 0;
+  font: inherit;
 }
 
 img {
@@ -85,74 +86,147 @@ img {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-.title-xl {
-  color: #13183f;
-  font-weight: 900;
-  font-size: 3.5rem;
-  line-height: 1.25;
+.container {
+  max-width: min(100% - 1rem, 689px);
+  margin-inline: auto;
 }
-
-.title-l {
-  color: #13183f;
-  font-weight: 900;
-  font-size: 2.5rem;
-  line-height: 1.275;
-}
-
-.title-m {
-  color: #13183f;
-  font-weight: 900;
-  font-size: 2rem;
-  line-height: 1.25;
-}
-
-.title-s {
-  color: #13183f;
-  font-weight: 900;
-  font-size: 1.5rem;
-  line-height: 1.16;
-}
-
-.body-m {
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.5;
-}
-
-.body-s {
-  font-size: 1rem;
-  line-height: 1.75;
-  font-weight: 700;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap, 1rem);
-}
-
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 1110px;
-    margin-inline: auto;
+  }
+}
+
+/***********************************
+PAGE SECTIONS
+***********************************/
+.header__container,
+.footer__container {
+  max-width: min(100% - 1rem, 689px);
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .header__container,
+.footer__container {
+    max-width: 1110px;
+  }
+}
+
+.header {
+  padding-block: 1rem;
+}
+.header__logo-container {
+  width: 5.625rem;
+}
+@media screen and (min-width: 1440px) {
+  .header__logo-container {
+    width: 7.125rem;
+  }
+}
+
+.footer {
+  background-color: #13183f;
+}
+
+.hero {
+  display: flex;
+}
+.hero__image-container {
+  width: 100%;
+}
+
+.courses__title-card {
+  background: linear-gradient(0deg, #f02aa6, #ff6f48);
+  color: #ffffff;
+  padding-block-start: 1em;
+  padding-inline: 1.16em;
+  padding-block-end: 1.33em;
+  border-radius: 0.416em;
+}
+/*******************************************
+Smaller On-page Components
+********************************************/
+.title-l {
+  font-weight: 800;
+  color: #13183f;
+  font-size: 2.5rem;
+  line-height: 1.275;
+}
+@media screen and (min-width: 1440px) {
+  .title-l {
+    font-weight: 900;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .title-l {
+    font-size: 3.5rem;
+    line-height: 1.25;
+  }
+}
+
+.title-m {
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.33;
+}
+@media screen and (min-width: 1440px) {
+  .title-m {
+    font-weight: 900;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .title-m {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+}
+
+.title-s {
+  font-weight: 800;
+  color: #13183f;
+  font-size: 1.25rem;
+  line-height: 1.26;
+}
+@media screen and (min-width: 1440px) {
+  .title-s {
+    font-weight: 900;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .title-s {
+    font-size: 1.5rem;
+  }
+}
+
+.body-copy {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+@media screen and (min-width: 1440px) {
+  .body-copy {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5;
   }
 }
 
 .btn-neutral {
   appearance: none;
   border: 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
-  padding-block: 0.77em;
-  padding-inline: 1.77em;
   border-radius: 1000em;
   color: #ffffff;
   position: relative;
   transition-property: transform;
   transition-duration: 0.3s;
   background-color: #13183f;
+  padding-inline: 1.5em;
+  padding-block: 0.5em;
 }
 .btn-neutral::before {
   content: "";
@@ -178,15 +252,18 @@ img {
   transform: translateY(0);
   transition: none;
 }
+@media screen and (min-width: 1440px) {
+  .btn-neutral {
+    font-size: 1.125rem;
+  }
+}
 .btn-gradient-300 {
   appearance: none;
   border: 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
-  padding-block: 0.77em;
-  padding-inline: 1.77em;
   border-radius: 1000em;
   color: #ffffff;
   position: relative;
@@ -221,12 +298,10 @@ img {
 .btn-gradient-700 {
   appearance: none;
   border: 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
-  padding-block: 0.77em;
-  padding-inline: 1.77em;
   border-radius: 1000em;
   color: #ffffff;
   position: relative;
@@ -257,31 +332,6 @@ img {
 .btn-gradient-700:active {
   transform: translateY(0);
   transition: none;
-}
-
-.header__container,
-.footer__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@media screen and (min-width: 1440px) {
-  .header__container,
-.footer__container {
-    max-width: 1110px;
-    margin-inline: auto;
-  }
-}
-
-.footer {
-  background-color: #13183f;
-}
-
-.hero {
-  display: flex;
-}
-.hero__image-container {
-  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

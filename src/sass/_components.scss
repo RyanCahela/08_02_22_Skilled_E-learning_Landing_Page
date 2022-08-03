@@ -1,22 +1,9 @@
 @use "./variables" as var;
 @use "./mixins" as mix;
 
-.btn {
-  &-neutral {
-    @include mix.btn;
-    background-color: var.$clr-neutral-900;
-  }
-
-  &-gradient-300 {
-    @include mix.btn;
-    background: var.$clr-gradient-300;
-  }
-
-  &-gradient-700 {
-    @include mix.btn;
-    background: var.$clr-gradient-700;
-  }
-}
+/***********************************
+PAGE SECTIONS
+***********************************/
 
 .header,
 .footer {
@@ -25,6 +12,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.header {
+  padding-block: 1rem;
+
+  &__logo-container {
+    width: 5.625rem;
+
+    @media screen and (min-width: 1440px) {
+      width: 7.125rem;
+    }
   }
 }
 
@@ -37,5 +36,62 @@
 
   &__image-container {
     width: 100%;
+  }
+}
+
+.courses {
+  &__title-card {
+    background: var.$clr-gradient-300;
+    color: var.$clr-neutral-100;
+
+    padding-block-start: 1em;
+    padding-inline: 1.16em;
+    padding-block-end: 1.33em;
+    border-radius: 0.416em;
+  }
+
+  &__card {
+  }
+}
+
+/*******************************************
+Smaller On-page Components
+********************************************/
+.title-l {
+  @include mix.title-l;
+}
+
+.title-m {
+  @include mix.title-m;
+}
+
+.title-s {
+  @include mix.title-s;
+}
+
+.body-copy {
+  @include mix.body-copy;
+}
+
+.btn {
+  &-neutral {
+    @include mix.btn;
+    background-color: var.$clr-neutral-900;
+    padding-inline: 1.5em;
+    padding-block: 0.5em;
+
+    @media screen and (min-width: 1440px) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &-gradient-300 {
+    @include mix.btn;
+    background: var.$clr-gradient-300;
+  }
+
+  &-gradient-700 {
+    @include mix.btn;
+    background: var.$clr-gradient-700;
   }
 }

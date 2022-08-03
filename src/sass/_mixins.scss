@@ -1,44 +1,68 @@
 @use "./variables" as var;
 
-@mixin _title-common-properties {
-  color: var.$clr-neutral-900;
-  font-weight: 900;
+@mixin _title-weight {
+  font-weight: 800;
+
+  @media screen and (min-width: 1440px) {
+    font-weight: 900;
+  }
 }
 
-@mixin title-xl {
-  @include _title-common-properties;
+@mixin _title-default-color {
+  color: var.$clr-neutral-900;
+}
+
+@mixin _title-xl {
   font-size: 3.5rem;
   line-height: 1.25;
 }
 
+@mixin _body-s {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
 @mixin title-l {
-  @include _title-common-properties;
+  @include _title-weight;
+  @include _title-default-color;
   font-size: 2.5rem;
   line-height: 1.275;
+
+  @media screen and (min-width: 1440px) {
+    @include _title-xl;
+  }
 }
 
 @mixin title-m {
-  @include _title-common-properties;
-  font-size: 2rem;
-  line-height: 1.25;
+  @include _title-weight;
+  font-size: 1.5rem;
+  line-height: 1.33;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
 }
 
 @mixin title-s {
-  @include _title-common-properties;
-  font-size: 1.5rem;
-  line-height: 1.16;
+  @include _title-weight;
+  @include _title-default-color;
+  font-size: 1.25rem;
+  line-height: 1.26;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 1.5rem;
+  }
 }
 
-@mixin body-m {
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.5;
-}
+@mixin body-copy {
+  @include _body-s;
 
-@mixin body-s {
-  font-size: 1rem;
-  line-height: 1.75;
-  font-weight: 700;
+  @media screen and (min-width: 1440px) {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
 }
 
 @mixin btn {
@@ -47,12 +71,10 @@
   appearance: none;
   border: 0;
 
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
-  padding-block: 0.77em;
-  padding-inline: 1.77em;
   border-radius: 1000em;
   color: var.$clr-neutral-100;
   position: relative;
@@ -89,8 +111,10 @@
 }
 
 @mixin container {
+  max-width: min(calc(100% - 1rem), 689px);
+  margin-inline: auto;
+
   @media screen and (min-width: 1440px) {
     max-width: 1110px;
-    margin-inline: auto;
   }
 }
