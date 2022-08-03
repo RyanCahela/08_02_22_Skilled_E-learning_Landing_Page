@@ -109,11 +109,26 @@ PAGE SECTIONS
     display: flex;
     flex-direction: column;
     padding-block-end: 5rem;
+
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2rem;
+      column-gap: 0.75rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 3.5rem;
+      column-gap: 2rem;
+    }
   }
 
   &__title-card,
   &__card:not(:last-child) {
-    margin-bottom: 2.5rem;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 2.5rem;
+    }
   }
 
   &__title-card {
@@ -124,6 +139,11 @@ PAGE SECTIONS
     padding-inline: 1.16em;
     padding-block-end: 1.33em;
     border-radius: $card-border-radius;
+
+    @media screen and (min-width: 768px) {
+      padding-block-start: 3.5rem;
+      padding-inline: 2rem;
+    }
   }
 
   &__card {
@@ -136,6 +156,7 @@ PAGE SECTIONS
 
     @media screen and (min-width: 768px) {
       padding-inline: 2em;
+      margin-bottom: 0;
     }
 
     @media screen and (min-width: 1400px) {
