@@ -71,7 +71,6 @@
   appearance: none;
   border: 0;
 
-  font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
@@ -108,6 +107,24 @@
     transform: translateY(0);
     transition: none;
   }
+}
+
+@mixin btn-sm {
+  font-size: 1rem;
+  padding-inline: 1.5em;
+  padding-block: 0.625em;
+}
+
+@mixin btn-md {
+  font-size: 1rem;
+  padding-inline: 2.25em;
+  padding-block: 1em;
+}
+
+@mixin btn-lg {
+  font-size: 1.125rem;
+  padding-block: 1.25em;
+  padding-inline: 2em;
 }
 
 @mixin container {

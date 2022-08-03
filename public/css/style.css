@@ -128,6 +128,8 @@ PAGE SECTIONS
 
 .footer {
   background-color: #13183f;
+  padding-block: 2.25rem;
+  padding-inline: 1rem;
 }
 
 .hero {
@@ -137,6 +139,24 @@ PAGE SECTIONS
   width: 100%;
 }
 
+.courses {
+  background: linear-gradient(180deg, #ffffff, #f0f1ff);
+}
+.courses__container {
+  max-width: min(100% - 1rem, 689px);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  padding-block-end: 5rem;
+}
+@media screen and (min-width: 1440px) {
+  .courses__container {
+    max-width: 1110px;
+  }
+}
+.courses__title-card, .courses__card:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
 .courses__title-card {
   background: linear-gradient(0deg, #f02aa6, #ff6f48);
   color: #ffffff;
@@ -145,6 +165,54 @@ PAGE SECTIONS
   padding-block-end: 1.33em;
   border-radius: 0.416em;
 }
+.courses__card {
+  background-color: #ffffff;
+  padding-inline: 1.75em;
+  padding-block-start: 3.5em;
+  padding-block-end: 2em;
+  border-radius: 0.416em;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .courses__card {
+    padding-inline: 2em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .courses__card {
+    padding-block-end: 2.2em;
+    padding-block-start: 3.5em;
+  }
+}
+.courses__link {
+  color: #f74780;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 700;
+}
+.courses__link:hover {
+  color: #ffa7c3;
+}
+.courses__icon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50%, -50%);
+}
+.courses__paragraph-copy {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-block-start: 1em;
+  margin-block-end: 1.5em;
+}
+@media screen and (min-width: 1440px) {
+  .courses__paragraph-copy {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+
 /*******************************************
 Smaller On-page Components
 ********************************************/
@@ -215,7 +283,6 @@ Smaller On-page Components
 .btn-neutral {
   appearance: none;
   border: 0;
-  font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
@@ -224,9 +291,10 @@ Smaller On-page Components
   position: relative;
   transition-property: transform;
   transition-duration: 0.3s;
-  background-color: #13183f;
+  font-size: 1rem;
   padding-inline: 1.5em;
-  padding-block: 0.5em;
+  padding-block: 0.625em;
+  background-color: #13183f;
 }
 .btn-neutral::before {
   content: "";
@@ -254,13 +322,14 @@ Smaller On-page Components
 }
 @media screen and (min-width: 1440px) {
   .btn-neutral {
-    font-size: 1.125rem;
+    font-size: 1rem;
+    padding-inline: 2.25em;
+    padding-block: 1em;
   }
 }
 .btn-gradient-300 {
   appearance: none;
   border: 0;
-  font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
@@ -269,6 +338,9 @@ Smaller On-page Components
   position: relative;
   transition-property: transform;
   transition-duration: 0.3s;
+  font-size: 1rem;
+  padding-inline: 2.25em;
+  padding-block: 1em;
   background: linear-gradient(0deg, #f02aa6, #ff6f48);
 }
 .btn-gradient-300::before {
@@ -295,10 +367,16 @@ Smaller On-page Components
   transform: translateY(0);
   transition: none;
 }
+@media screen and (min-width: 1440px) {
+  .btn-gradient-300 {
+    font-size: 1.125rem;
+    padding-block: 1.25em;
+    padding-inline: 2em;
+  }
+}
 .btn-gradient-700 {
   appearance: none;
   border: 0;
-  font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
@@ -307,6 +385,9 @@ Smaller On-page Components
   position: relative;
   transition-property: transform;
   transition-duration: 0.3s;
+  font-size: 1rem;
+  padding-inline: 1.5em;
+  padding-block: 0.625em;
   background: linear-gradient(180deg, #4861ff, #f02aa6);
 }
 .btn-gradient-700::before {
@@ -332,6 +413,13 @@ Smaller On-page Components
 .btn-gradient-700:active {
   transform: translateY(0);
   transition: none;
+}
+@media screen and (min-width: 1440px) {
+  .btn-gradient-700 {
+    font-size: 1rem;
+    padding-inline: 2.25em;
+    padding-block: 1em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
