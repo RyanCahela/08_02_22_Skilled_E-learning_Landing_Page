@@ -199,14 +199,14 @@ PAGE SECTIONS
   left: 0;
   transform: translate(50%, -50%);
 }
-.courses__paragraph-copy {
+.courses__paragraph {
   font-size: 1rem;
   line-height: 1.75;
   margin-block-start: 1em;
   margin-block-end: 1.5em;
 }
 @media screen and (min-width: 1440px) {
-  .courses__paragraph-copy {
+  .courses__paragraph {
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.5;

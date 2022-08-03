@@ -107,7 +107,7 @@ PAGE SECTIONS
     transform: translate(50%, -50%);
   }
 
-  &__paragraph-copy {
+  &__paragraph {
     @include mix.body-copy;
     margin-block-start: 1em;
     margin-block-end: 1.5em;
