@@ -131,12 +131,48 @@ PAGE SECTIONS
   padding-block: 2.25rem;
   padding-inline: 1rem;
 }
+.footer__logo-container {
+  width: 5.625rem;
+}
+@media screen and (min-width: 1440px) {
+  .footer__logo-container {
+    width: 7.125rem;
+  }
+}
 
 .hero {
   display: flex;
 }
 .hero__image-container {
   width: 100%;
+}
+.hero__paragraph {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+@media screen and (min-width: 1440px) {
+  .hero__paragraph {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}
+.hero__title-l {
+  font-weight: 800;
+  color: #13183f;
+  font-size: 2.5rem;
+  line-height: 1.275;
+}
+@media screen and (min-width: 1440px) {
+  .hero__title-l {
+    font-weight: 900;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero__title-l {
+    font-size: 3.5rem;
+    line-height: 1.25;
+  }
 }
 
 .courses {
@@ -184,6 +220,22 @@ PAGE SECTIONS
     padding-block-start: 3.5em;
   }
 }
+.courses__title-s {
+  font-weight: 800;
+  color: #13183f;
+  font-size: 1.25rem;
+  line-height: 1.26;
+}
+@media screen and (min-width: 1440px) {
+  .courses__title-s {
+    font-weight: 900;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .courses__title-s {
+    font-size: 1.5rem;
+  }
+}
 .courses__link {
   color: #f74780;
   text-decoration: none;
@@ -216,58 +268,6 @@ PAGE SECTIONS
 /*******************************************
 Smaller On-page Components
 ********************************************/
-.title-l {
-  font-weight: 800;
-  color: #13183f;
-  font-size: 2.5rem;
-  line-height: 1.275;
-}
-@media screen and (min-width: 1440px) {
-  .title-l {
-    font-weight: 900;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .title-l {
-    font-size: 3.5rem;
-    line-height: 1.25;
-  }
-}
-
-.title-m {
-  font-weight: 800;
-  font-size: 1.5rem;
-  line-height: 1.33;
-}
-@media screen and (min-width: 1440px) {
-  .title-m {
-    font-weight: 900;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .title-m {
-    font-size: 2rem;
-    line-height: 1.25;
-  }
-}
-
-.title-s {
-  font-weight: 800;
-  color: #13183f;
-  font-size: 1.25rem;
-  line-height: 1.26;
-}
-@media screen and (min-width: 1440px) {
-  .title-s {
-    font-weight: 900;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .title-s {
-    font-size: 1.5rem;
-  }
-}
-
 .body-copy {
   font-size: 1rem;
   line-height: 1.75;

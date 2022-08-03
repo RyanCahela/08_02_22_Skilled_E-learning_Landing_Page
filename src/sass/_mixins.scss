@@ -135,3 +135,11 @@
     max-width: 1110px;
   }
 }
+
+@mixin logo-container {
+  width: 5.625rem;
+
+  @media screen and (min-width: 1440px) {
+    width: 7.125rem;
+  }
+}
